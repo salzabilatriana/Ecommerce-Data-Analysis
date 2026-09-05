@@ -1,15 +1,15 @@
-# ✨ E-Commerce Public Dataset — Data Analysis Project
+# E-Commerce Public Dataset — Data Analysis Project
 
-Proyek analisis data menggunakan **E-Commerce Public Dataset (Olist Brazilian E-Commerce)**. Proyek ini mencakup proses analisis data lengkap (data wrangling, EDA, visualisasi, hingga kesimpulan & rekomendasi) serta dashboard interaktif berbasis **Streamlit**.
+A data analysis project using the **E-Commerce Public Dataset (Olist Brazilian E-Commerce)**. This project covers the complete data analysis process (data wrangling, EDA, visualization, through to conclusions & recommendations) as well as an interactive dashboard built with **Streamlit**.
 
-## Struktur Direktori
+## Directory Structure
 
 ```
 submission
 ├───dashboard
-│   ├───main_data.csv       # data hasil cleaning & merging, dipakai dashboard
-│   └───dashboard.py        # aplikasi Streamlit
-├───data                    # dataset mentah (raw CSV)
+│   ├───main_data.csv       # cleaned & merged data, used by the dashboard
+│   └───dashboard.py        # Streamlit application
+├───data                    # raw dataset (raw CSV)
 │   ├───customers_dataset.csv
 │   ├───order_items_dataset.csv
 │   ├───order_payments_dataset.csv
@@ -18,61 +18,62 @@ submission
 │   ├───product_category_name_translation.csv
 │   ├───products_dataset.csv
 │   └───sellers_dataset.csv
-├───notebook.ipynb          # notebook analisis data lengkap (sudah dijalankan)
+├───notebook.ipynb          # complete data analysis notebook (already executed)
 ├───README.md
 ├───requirements.txt
 └───url.txt
 ```
 
-## Pertanyaan Bisnis
+## Business Questions
 
-1. Bagaimana tren jumlah pesanan (order) secara bulanan sepanjang Januari 2017 - Agustus 2018, dan 5 kategori produk apa yang menyumbang revenue tertinggi selama periode tersebut?
-2. Berapa perbedaan rata-rata skor ulasan (review score) antara pesanan yang terlambat dikirim dengan pesanan yang tepat waktu?
+1. What is the monthly order trend from January 2017 to August 2018, and which 5 product categories contributed the highest revenue during that period?
+2. What is the difference in average review score between orders that were delivered late versus orders that were delivered on time?
 
-Jawaban lengkap beserta proses analisisnya ada di `notebook.ipynb`.
+The complete answers along with the analysis process can be found in `notebook.ipynb`.
 
-## Setup Environment
+## Environment Setup
 
-Disarankan menggunakan virtual environment terlebih dahulu.
+It is recommended to use a virtual environment first.
 
-**Menggunakan venv (pip):**
+**Using venv (pip):**
 ```
 python -m venv venv
 source venv/bin/activate      # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Menggunakan Anaconda:**
+**Using Anaconda:**
 ```
 conda create --name ecommerce-analysis python=3.11
 conda activate ecommerce-analysis
 pip install -r requirements.txt
 ```
 
-## Menjalankan Notebook
+## Running the Notebook
 
 ```
 jupyter notebook notebook.ipynb
 ```
-Notebook membaca dataset mentah dari folder `data/` (path relatif `data/`), sehingga jalankan Jupyter dari dalam folder `submission/`.
+The notebook reads the raw dataset from the `data/` folder (relative path `data/`), so run Jupyter from inside the `submission/` folder.
 
-## Menjalankan Dashboard (Streamlit)
+## Running the Dashboard (Streamlit)
 
-Dashboard membaca `main_data.csv` yang sudah bersih (hasil dari proses di notebook), jadi jalankan dari dalam folder `dashboard/`:
+The dashboard reads the cleaned `main_data.csv` (produced by the notebook process), so run it from inside the `dashboard/` folder:
 
 ```
 cd dashboard
 streamlit run dashboard.py
 ```
 
-Setelah berjalan, buka browser ke alamat yang ditampilkan di terminal (default: `http://localhost:8501`).
+Once running, open your browser to the address shown in the terminal (default: `http://localhost:8501`).
 
-### Fitur Dashboard
-- Filter interaktif: rentang bulan, wilayah pelanggan (state), dan kategori produk.
-- Ringkasan metrik utama: jumlah order, total revenue, persentase pesanan terlambat, rata-rata review score.
-- Visualisasi tren order bulanan & top 5 kategori produk berdasarkan revenue.
-- Visualisasi perbandingan review score untuk pesanan tepat waktu vs terlambat, serta 10 wilayah dengan pesanan terlambat terbanyak.
+### Dashboard Features
+- Interactive filters: month range, customer region (state), and product category.
+- Key metrics summary: number of orders, total revenue, percentage of late orders, average review score.
+- Visualization of monthly order trends & top 5 product categories by revenue.
+- Visualization comparing review scores for on-time vs. late orders, plus the top 10 regions with the most late orders.
 
-## Sumber Data
+## Data Source
 
-E-Commerce Public Dataset (Olist Brazilian E-Commerce), diunggah oleh pengguna sebagai bagian dari submission proyek analisis data.
+E-Commerce Public Dataset (Olist Brazilian E-Commerce), uploaded for a data analysis project submission.
+
