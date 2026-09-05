@@ -1,0 +1,3 @@
+Dashboard belum di-deploy secara online. Jalankan secara lokal dengan langkah pada README.md.
+Jika di-deploy (misalnya ke Streamlit Community Cloud), ganti baris ini dengan URL dashboard, contoh:
+https://nama-app-anda.streamlit.app
